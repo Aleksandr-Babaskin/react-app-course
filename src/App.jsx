@@ -1,14 +1,16 @@
-import "./App.css";
-import { Counter } from "./Counter";
-import { List } from "./assets/List";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { MainLayout } from "./assets/components/MainLayout";
 
 function App() {
   return (
-    <>
-      <Counter />
-      <hr />
-      <List />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MainLayout />} />
+        <Route path="/home" element={<div>Home</div>} />
+        <Route path="/forbidden" element={<div>Forbidden</div>} />
+        <Route path="/addquestion" element={<div>Add Question</div>} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
