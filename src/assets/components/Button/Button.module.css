@@ -5,16 +5,27 @@
     font-size: 1em;
     font-weight: 500;
     font-family: inherit;
-    background-color: #2b2b2b;
+    background-color: var(--btn-bg-color);
+    color: var(--btn-text-color);
     cursor: pointer;
     transition: border-color 0.25s;
 }
 
 .btn:hover {
-    border-color: #646cff;
+    border-color: #2f2f2f;
 }
 
-.primary {
-    background-color: #1a1a1a;
-    border-color: #646cff;
+.btn:focus,
+.btn:focus-visible {
+    outline: 4px auto #2f2f2f;
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.active {
+    background-color: #ce7e1d;
+    color: #000;   
 }
